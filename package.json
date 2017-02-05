@@ -1,0 +1,24 @@
+{
+  "name": "mdexam",
+  "version": "1.0.0",
+  "description": "Exam questions/answers/checkers written in markdown",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/hxgqh/mdexam.git"
+  },
+  "keywords": [
+    "exam",
+    "markdown",
+    "nodejs"
+  ],
+  "author": "胡小根",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hxgqh/mdexam/issues"
+  },
+  "homepage": "https://github.com/hxgqh/mdexam#readme"
+}
