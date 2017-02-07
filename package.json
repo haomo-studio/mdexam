@@ -15,10 +15,15 @@
     "markdown",
     "nodejs"
   ],
-  "author": "胡小根",
+  "author": "Xiaogen Hu",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/hxgqh/mdexam/issues"
   },
-  "homepage": "https://github.com/hxgqh/mdexam#readme"
+  "homepage": "https://github.com/hxgqh/mdexam#readme",
+  "dependencies": {
+    "commander": "^2.9.0",
+    "lodash": "^4.17.4",
+    "marked": "^0.3.6"
+  }
 }

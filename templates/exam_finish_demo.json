@@ -1,0 +1,27 @@
+{
+  "id": "",
+  "title": "demo exam",
+  "author": "Xiaogen Hu",
+  "email": "hxg@haomo-studio.com",
+  "version": "1.0.0",
+  "tags": [
+    "linux",
+    "bash"
+  ],
+  "questions": [
+    {
+      "id": "",
+      "type": "单选题",
+      "question": "你",
+      "options": [
+        "选项1",
+        "选项2",
+        "选项3"
+      ],
+      "answer": "选项1"
+    },
+    {
+
+    }
+  ]
+}

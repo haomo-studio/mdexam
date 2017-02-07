@@ -1,1 +1,3 @@
 #!/usr/bin/env node
+
+// 解析命令行参数
