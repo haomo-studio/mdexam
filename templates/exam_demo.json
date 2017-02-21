@@ -13,6 +13,10 @@
       "id": "",
       "type": "multiple-choice",
       "question": "你",
+      "tags": [
+        "标签1",
+        "标签2"
+      ],
       "options": [
         "选项1",
         "选项2",
@@ -21,6 +25,16 @@
       "answer": [
         "选项1",
         "选项2"
+      ]
+    },
+    {
+      "id": "",
+      "type": "fill-in",
+      "question": "填空题",
+      "checker": [
+        {
+          "answer-regex": "/abc/"
+        }
       ]
     }
   ]
