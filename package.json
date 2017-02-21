@@ -25,5 +25,8 @@
     "commander": "^2.9.0",
     "lodash": "^4.17.4",
     "marked": "^0.3.6"
+  },
+  "devDependencies": {
+    "mocha": "^3.2.0"
   }
 }
