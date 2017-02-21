@@ -11,18 +11,7 @@
   "questions": [
     {
       "id": "",
-      "type": "单选题",
-      "question": "你",
-      "options": [
-        "选项1",
-        "选项2",
-        "选项3"
-      ],
-      "answer": "选项1"
-    },
-    {
-      "id": "",
-      "type": "多选题",
+      "type": "multiple-choice",
       "question": "你",
       "options": [
         "选项1",
@@ -33,10 +22,6 @@
         "选项1",
         "选项2"
       ]
-    },
-    {
-      "id": "",
-      "type": ""
     }
   ]
 }
