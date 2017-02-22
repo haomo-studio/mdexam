@@ -2,9 +2,12 @@
  * Created by haomo on 17/2/11.
  */
 "use strict";
-
+const fs = require('fs');
+const path = require('path');
 const mdexam = require('../lib/mdexam');
+
 let md = mdexam();
+
 
 // 测试切分markdown文件
 test('Test split exam markdown to question markdown', () => {
@@ -64,4 +67,25 @@ test('Convert fill-in markdown question to json', () => {
 
   expect(qj.checker.length).toBe(1);
   expect(qj.checker[0]['answer-regex']).toBe('/\\*\\s\\[answer-regex\\]\\s{0,}(\\S+)/g');
+});
+
+// 测试解析整个markdown文件
+test('Convert markdown to json', () => {
+  fs.readFile(__dirname + '/exam.md', {flag: 'r+', encoding: 'utf8'}, function (err, markdown) {
+    if(err) {
+      console.error(err);
+      return;
+    }
+
+    var qj = md.m2j(markdown);
+    console.log(qj);
+
+    expect(qj.title).toBe('试题名称');
+    expect(qj.author).toBe('胡小根');
+    expect(qj.email).toBe('hxg@haomo-studio.com');
+    expect(qj.version).toBe('v1.0.0');
+    expect(qj.tags.indexOf('标签1')).toBeGreaterThanOrEqual(0);
+    expect(qj.tags.indexOf('标签2')).toBeGreaterThanOrEqual(0);
+    expect(qj.tags.indexOf('标签3')).toBeGreaterThanOrEqual(0);
+  });
 });
