@@ -2,13 +2,14 @@
  * Created by haomo on 17/2/11.
  */
 "use strict";
-const fs = require('fs');
-const path = require('path');
-const mdexam = require('../lib/mdexam');
 
-let md = mdexam();
+var fs = require('fs');
+var path = require('path');
+var mdexam = require('../lib/mdexam');
 
-test('测试将选择题转换成JSON', () => {
+var md = mdexam();
+
+test('测试将选择题转换成JSON', function () {
   var mdq = "\
 ## [选择题] 题目内容\
 \n\
@@ -41,7 +42,7 @@ test('测试将选择题转换成JSON', () => {
   expect(qj.answers.indexOf('选项2')).toBeGreaterThanOrEqual(0);
 });
 
-test('测试将填空题转换成JSON', () => {
+test('测试将填空题转换成JSON', function () {
   var mdq = "## [填空题] 题目内容\n\
 #### [标签]\n\
   * 标签11\n\
@@ -65,7 +66,7 @@ test('测试将填空题转换成JSON', () => {
   expect(qj.checker[0]['answer-regex']).toBe('/\\*\\s\\[answer-regex\\]\\s{0,}(\\S+)/g');
 });
 
-test('测试将命令题转换成JSON', () => {
+test('测试将命令题转换成JSON', function () {
   var mdq = "## [命令题] 题目内容\n\
 #### [标签]\n\
   * 标签11\n\
@@ -91,8 +92,8 @@ test('测试将命令题转换成JSON', () => {
   expect(qj.checker[1]['output-regex']).toBe('/\\*\\s\\[output-regex\\]\\s{0,}(\\S+)/g');
 });
 
-test('测试解析整个markdown文件', () => {
-  var markdown = fs.readFileSync(__dirname + '/exam.md', {flag: 'r+', encoding: 'utf8'});
+test('测试解析整个markdown文件', function () {
+  var markdown = fs.readFileSync(__dirname + '/exam.md', { flag: 'r+', encoding: 'utf8' });
 
   var qj = md.m2j(markdown);
   console.log(qj);
@@ -105,3 +106,5 @@ test('测试解析整个markdown文件', () => {
   expect(qj.tags.indexOf('标签2')).toBeGreaterThanOrEqual(0);
   expect(qj.tags.indexOf('标签3')).toBeGreaterThanOrEqual(0);
 });
+
+//# sourceMappingURL=mdexam.test-compiled.js.map

@@ -12,7 +12,7 @@
     {
       "id": "",
       "type": "multiple-choice",
-      "question": "你",
+      "question": "选择题",
       "tags": [
         "标签1",
         "标签2"
@@ -31,11 +31,23 @@
       "id": "",
       "type": "fill-in",
       "question": "填空题",
+      "answer": "正确答案，或者被测人员的答案",
       "checker": [
         {
           "answer-regex": "/abc/"
         }
       ]
-    }
+    },
+    {
+      "id": "",
+      "type": "cmd-fill-in",
+      "question": "命令提",
+      "answer": "正确答案，或者被测人员的答案",
+      "checker": [
+        {
+          "answer-regex": "/abc/"
+        }
+      ]
+    },
   ]
 }

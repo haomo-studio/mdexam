@@ -7,6 +7,10 @@ Exam questions/answers/checkers written in markdown.
 
 ## Intro
 
+Related packages are:
+ 
+* []() 
+
 ## Examples
 
 ## Usage
@@ -17,7 +21,13 @@ Exam questions/answers/checkers written in markdown.
 
 ### CLI
 
-    npm instal
+Convert markdown to json file:
+
+    node bin/mdexam -m <markdown> -o <output.json>
+
+Convert json to markdown file:
+          
+    node bin/mdexam -j <json> -o <markdown.md>          
     
 ### As Nodejs Lib
     

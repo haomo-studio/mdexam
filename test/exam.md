@@ -25,6 +25,9 @@
 * 标签11
 * 标签12
 
+#### [答案]
+* 正确答案或者用户的回答
+
 #### [验证]
 * [answer-regex] /\*\s\[answer-regex\]\s{0,}(\S+)/g
 
@@ -33,9 +36,12 @@
 * 标签11
 * 标签12
 
+#### [答案]
+* 正确答案或者用户的回答
+
 #### [验证]
-* [answer-regex]
-* [output-regex]
+* [answer-regex] /abc/g
+* [output-regex] /abc/g
 
 ## [代码片段题] 题目内容
 #### [标签] 
