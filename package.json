@@ -1,6 +1,6 @@
 {
   "name": "mdexam",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Exam questions/answers/checkers written in markdown",
   "main": "index.js",
   "scripts": {
