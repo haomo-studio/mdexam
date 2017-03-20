@@ -29,7 +29,7 @@ if(program.markdown) {
     var qj = md.m2j(markdown);
     console.log(qj);
 
-    fs.writeFile(path.output, qj, {flag: 'w+', encoding: 'utf8'}, function(err){
+    fs.writeFile(program.output, JSON.stringify(qj, null, 4), {flag: 'w+', encoding: 'utf8'}, function(err){
       if(err) {
         console.error(err);
       }

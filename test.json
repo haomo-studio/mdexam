@@ -1,0 +1,60 @@
+{
+    "questions": [
+        {
+            "type": "multiple-choice",
+            "question": "题目内容",
+            "tags": [
+                "标签11",
+                "标签12"
+            ],
+            "options": [
+                "A",
+                "B",
+                "C"
+            ],
+            "answers": [
+                "A"
+            ]
+        },
+        {
+            "type": "fill-in",
+            "question": "题目内容",
+            "answer": "正确答案或者用户的回答",
+            "tags": [
+                "标签11",
+                "标签12"
+            ],
+            "checker": [
+                {
+                    "answer-regex": "/\\*\\s\\[answer-regex\\]\\s{0,}(\\S+)/g"
+                }
+            ]
+        },
+        {
+            "type": "cmd-fill-in",
+            "question": "题目内容",
+            "answer": "正确答案或者用户的回答",
+            "tags": [
+                "标签11",
+                "标签12"
+            ],
+            "checker": [
+                {
+                    "answer-regex": "/abc/g"
+                },
+                {
+                    "output-regex": "/abc/g"
+                }
+            ]
+        }
+    ],
+    "title": "试题名称",
+    "author": "胡小根",
+    "email": "hxg@haomo-studio.com",
+    "version": "v1.0.0",
+    "tags": [
+        "标签1",
+        "标签2",
+        "标签3"
+    ]
+}
