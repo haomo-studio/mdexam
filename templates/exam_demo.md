@@ -42,34 +42,3 @@
 #### [验证]
 * [answer-regex] /abc/g
 * [output-regex] /abc/g
-
-## [代码片段题] 题目内容
-#### [标签] 
-* 标签11
-* 标签12
-
-#### [链接]
-* [codepen][codepen链接](http://codepen.io/iliadraznin/pen/JcqbE)
-* [jsfiddle][jsFiddle链接](https://jsfiddle.net/)
-* [plunker][Plunker链接](http://plnkr.co/edit/tg25kr)
-
-#### [答案]
-* [codepen][codepen链接](http://codepen.io/iliadraznin/pen/JcqbE)
-* [jsfiddle][jsFiddle链接](https://jsfiddle.net/)
-* [plunker][Plunker链接](http://plnkr.co/edit/tg25kr)
-
-
-## [项目工程题] 题目内容
-#### [标签] 
-* 标签11
-* 标签12
-
-#### [链接]
-* [cloud9][cloud9链接](http://xxx)
-* [Codenvy][Codenvy链接](http://xxx)
-* [CodeAnywhere][CodeAnywhere链接](http://xxx)
-
-#### [答案]
-* [codepen][codepen链接](http://xxx)
-* [jsfiddle][jsFiddle链接](http://xxx)
-* [plunker][Plunker链接](http://xxx)
