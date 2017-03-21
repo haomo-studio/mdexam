@@ -105,3 +105,174 @@ test('测试解析整个markdown文件', () => {
   expect(qj.tags.indexOf('标签2')).toBeGreaterThanOrEqual(0);
   expect(qj.tags.indexOf('标签3')).toBeGreaterThanOrEqual(0);
 });
+
+test('测试自动评价选择题', () => {
+  var originQj = {
+    "type": "multiple-choice",
+    "question": "题目内容",
+    "tags": [
+      "标签11",
+      "标签12"
+    ],
+    "options": [
+      "A",
+      "B",
+      "C"
+    ],
+    "answers": [
+      "A",
+      "B"
+    ]
+  };
+
+  var testQj1 = {
+    "type": "multiple-choice",
+    "question": "题目内容",
+    "tags": [
+      "标签11",
+      "标签12"
+    ],
+    "options": [
+      "A",
+      "B",
+      "C"
+    ],
+    "answers": [
+      "A",
+      "B"
+    ]
+  };
+
+  var testQj2 = {
+    "type": "multiple-choice",
+    "question": "题目内容",
+    "tags": [
+      "标签11",
+      "标签12"
+    ],
+    "options": [
+      "A",
+      "B",
+      "C"
+    ],
+    "answers": [
+      "A"
+    ]
+  };
+
+  var testQj3 = {
+    "type": "multiple-choice",
+    "question": "题目内容",
+    "tags": [
+      "标签11",
+      "标签12"
+    ],
+    "options": [
+      "A",
+      "B",
+      "C"
+    ],
+    "answers": [
+      "A",
+      "C"
+    ]
+  };
+
+  expect(md.checkChoice(originQj, testQj1)).toBe(true);
+  expect(md.checkChoice(originQj, testQj2)).toBe(false);
+  expect(md.checkChoice(originQj, testQj3)).toBe(false);
+});
+
+test('测试自动评价填空题', () => {
+  var originQj = {
+    "type": "fill-in",
+    "question": "1 + 1 = ?",
+    "answer": "2",
+    "tags": [
+      "标签11",
+      "标签12"
+    ],
+    "checker": [
+      {
+        "answer-regex": "/^2$/"
+      }
+    ]
+  };
+
+  var testQj1 = {
+    "type": "fill-in",
+    "question": "题目内容",
+    "answer": "2",
+    "tags": [
+      "标签11",
+      "标签12"
+    ]
+  };
+
+  var testQj2 = {
+    "type": "fill-in",
+    "question": "题目内容",
+    "answer": "3",
+    "tags": [
+      "标签11",
+      "标签12"
+    ]
+  };
+
+  expect(md.checkChoice(originQj, testQj1)).toBe(true);
+  expect(md.checkChoice(originQj, testQj2)).toBe(false);
+});
+
+test('测试自动评价命令题', () => {
+  var originQj = {
+    "type": "cmd-fill-in",
+    "question": "请用一行命令杀死所有包含进程中包含字符串node的命令",
+    "answer": "kill -9 `ps -ef|grep node|awk '{print $2}'`",
+    "tags": [
+      "标签11",
+      "标签12"
+    ],
+    "checker": [
+      {
+        "answer-regex": "/abc/g"
+      },
+      {
+        "output-regex": "/abc/g"
+      }
+    ]
+  };
+
+  var testQj1 = {
+    "type": "cmd-fill-in",
+    "question": "请用一行命令杀死所有包含进程中包含字符串node的命令",
+    "answer": "kill -9 `ps -ef|grep node|awk '{print $2}'`",
+    "tags": [
+      "标签11",
+      "标签12"
+    ]
+  };
+
+  var testQj2 = {
+    "type": "cmd-fill-in",
+    "question": "请用一行命令杀死所有包含进程中包含字符串node的命令",
+    "answer": "kill -9 `ps -ef|awk '{print $2}'`",
+    "tags": [
+      "标签11",
+      "标签12"
+    ]
+  };
+
+  var testQj3 = {
+    "type": "cmd-fill-in",
+    "question": "请用一行命令杀死所有包含进程中包含字符串node的命令",
+    "answer": "我不知道",
+    "tags": [
+      "标签11",
+      "标签12"
+    ]
+  };
+
+  expect(md.checkChoice(originQj, testQj1)).toBe(true);
+  expect(md.checkChoice(originQj, testQj2)).toBe(false);
+  expect(md.checkChoice(originQj, testQj3)).toBe(false);
+});
