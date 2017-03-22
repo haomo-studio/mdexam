@@ -37,8 +37,8 @@ test('测试将选择题转换成JSON', () => {
   expect(qj.options.indexOf('选项2')).toBeGreaterThanOrEqual(0);
   expect(qj.options.indexOf('选项3')).toBeGreaterThanOrEqual(0);
 
-  expect(qj.answers.indexOf('选项1')).toBeGreaterThanOrEqual(0);
-  expect(qj.answers.indexOf('选项2')).toBeGreaterThanOrEqual(0);
+  expect(qj.answer.indexOf('选项1')).toBeGreaterThanOrEqual(0);
+  expect(qj.answer.indexOf('选项2')).toBeGreaterThanOrEqual(0);
 });
 
 test('测试将填空题转换成JSON', () => {
