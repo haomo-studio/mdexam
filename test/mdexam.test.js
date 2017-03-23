@@ -234,7 +234,7 @@ test('测试自动评价命令题', () => {
     ],
     "checker": [
       {
-        "answer-regex": "/grep/g"
+        "answer-regex": "/grep/"
       },
       {
         "output-regex": "/abc/g"
