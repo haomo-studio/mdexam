@@ -38,5 +38,19 @@ if(program.markdown) {
 }
 
 if(program.json) {
+  fs.readFile(program.json, {flag: 'r+', encoding: 'utf8'}, function (err, json) {
+    if(err) {
+      console.error(err);
+      return;
+    }
 
+    var qj = md.j2m(json);
+    console.log(qj);
+
+    fs.writeFile(program.output, JSON.stringify(qj, null, 4), {flag: 'w+', encoding: 'utf8'}, function(err){
+      if(err) {
+        console.error(err);
+      }
+    });
+  });
 }
