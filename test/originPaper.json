@@ -39,7 +39,7 @@
     {
       "type": "fill-in",
       "question": "在添加用户的时候可以使用___参数来指定用户的默认shell",
-      "answer": "-g",
+      "answer": "-d",
       "tags": [
         "标签11",
         "标签12"
