@@ -284,5 +284,5 @@ test('测试自动评价命令题', () => {
 });
 
 test('测试试卷', () => {
-  expect(md.jsonCheck(testPaper,originPaper)).toBe(10);
+  expect(md.jsonCheck(testPaper,originPaper)).toBe(true);
 });

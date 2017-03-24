@@ -15,8 +15,7 @@
       ],
       "answer": [
         "B、sh"
-      ],
-      "score": 0
+      ]
     },
     {
       "type": "multiple-choice",
@@ -33,8 +32,7 @@
       ],
       "answer": [
         "D、shutdown –r now"
-      ],
-      "score": 0
+      ]
     },
     {
       "type": "fill-in",
@@ -43,8 +41,7 @@
       "tags": [
         "标签11",
         "标签12"
-      ],
-      "score": 0
+      ]
     },
     {
       "type": "fill-in",
@@ -53,11 +50,8 @@
       "tags": [
         "标签11",
         "标签12"
-      ],
-      "score": 0
+      ]
     }
-
-
   ],
   "title": "linux",
   "author": "李静",
