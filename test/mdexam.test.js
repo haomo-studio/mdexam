@@ -179,8 +179,8 @@ test('测试自动评价选择题', () => {
   };
 
   expect(md.checkChoice(originQj, testQj1)).toBe(true);
-  // expect(md.checkChoice(originQj, testQj2)).toBe(false);
-  // expect(md.checkChoice(originQj, testQj3)).toBe(false);
+  expect(md.checkChoice(originQj, testQj2)).toBe(false);
+  expect(md.checkChoice(originQj, testQj3)).toBe(false);
 });
 
 test('测试自动评价填空题', () => {
