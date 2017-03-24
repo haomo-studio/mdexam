@@ -3,13 +3,18 @@
  */
 "use strict";
 
-var fs = require('fs');
-var path = require('path');
-var mdexam = require('../lib/mdexam');
+const fs = require('fs');
+const path = require('path');
+const mdexam = require('../lib/mdexam');
 
-var md = mdexam();
+//获取测试试卷
+const testPaper = require('./oPaper.json');
+// require(./testPaper.json);
+const originPaper = require('./tPaper.json');
 
-test('测试将选择题转换成JSON', function () {
+let md = mdexam();
+
+test('测试将选择题转换成JSON', () => {
   var mdq = "\
 ## [选择题] 题目内容\
 \n\
@@ -38,11 +43,11 @@ test('测试将选择题转换成JSON', function () {
   expect(qj.options.indexOf('选项2')).toBeGreaterThanOrEqual(0);
   expect(qj.options.indexOf('选项3')).toBeGreaterThanOrEqual(0);
 
-  expect(qj.answers.indexOf('选项1')).toBeGreaterThanOrEqual(0);
-  expect(qj.answers.indexOf('选项2')).toBeGreaterThanOrEqual(0);
+  expect(qj.answer.indexOf('选项1')).toBeGreaterThanOrEqual(0);
+  expect(qj.answer.indexOf('选项2')).toBeGreaterThanOrEqual(0);
 });
 
-test('测试将填空题转换成JSON', function () {
+test('测试将填空题转换成JSON', () => {
   var mdq = "## [填空题] 题目内容\n\
 #### [标签]\n\
   * 标签11\n\
@@ -66,7 +71,7 @@ test('测试将填空题转换成JSON', function () {
   expect(qj.checker[0]['answer-regex']).toBe('/\\*\\s\\[answer-regex\\]\\s{0,}(\\S+)/g');
 });
 
-test('测试将命令题转换成JSON', function () {
+test('测试将命令题转换成JSON', () => {
   var mdq = "## [命令题] 题目内容\n\
 #### [标签]\n\
   * 标签11\n\
@@ -92,7 +97,7 @@ test('测试将命令题转换成JSON', function () {
   expect(qj.checker[1]['output-regex']).toBe('/\\*\\s\\[output-regex\\]\\s{0,}(\\S+)/g');
 });
 
-test('测试解析整个markdown文件', function () {
+test('测试解析整个markdown文件', () => {
   var markdown = fs.readFileSync(__dirname + '/exam.md', { flag: 'r+', encoding: 'utf8' });
 
   var qj = md.m2j(markdown);
@@ -105,6 +110,116 @@ test('测试解析整个markdown文件', function () {
   expect(qj.tags.indexOf('标签1')).toBeGreaterThanOrEqual(0);
   expect(qj.tags.indexOf('标签2')).toBeGreaterThanOrEqual(0);
   expect(qj.tags.indexOf('标签3')).toBeGreaterThanOrEqual(0);
+});
+
+test('测试自动评价选择题', () => {
+  var originQj = {
+    "type": "multiple-choice",
+    "question": "题目内容",
+    "tags": ["标签11", "标签12"],
+    "options": ["A", "B", "C"],
+    "answer": ["A", "B"]
+  };
+
+  var testQj1 = {
+    "type": "multiple-choice",
+    "question": "题目内容",
+    "tags": ["标签11", "标签12"],
+    "options": ["A", "B", "C"],
+    "answer": ["A", "B"]
+  };
+
+  var testQj2 = {
+    "type": "multiple-choice",
+    "question": "题目内容",
+    "tags": ["标签11", "标签12"],
+    "options": ["A", "B", "C"],
+    "answer": ["A"]
+  };
+
+  var testQj3 = {
+    "type": "multiple-choice",
+    "question": "题目内容",
+    "tags": ["标签11", "标签12"],
+    "options": ["A", "B", "C"],
+    "answer": ["A", "C"]
+  };
+
+  expect(md.checkChoice(originQj, testQj1)).toBe(true);
+  expect(md.checkChoice(originQj, testQj2)).toBe(false);
+  expect(md.checkChoice(originQj, testQj3)).toBe(false);
+});
+
+test('测试自动评价填空题', () => {
+  var originQj = {
+    "type": "fill-in",
+    "question": "1 + 1 = ?",
+    "answer": "2",
+    "tags": ["标签11", "标签12"],
+    "checker": [{
+      "answer-regex": "/^2$/"
+    }]
+  };
+
+  var testQj1 = {
+    "type": "fill-in",
+    "question": "题目内容",
+    "answer": "2",
+    "tags": ["标签11", "标签12"]
+  };
+
+  var testQj2 = {
+    "type": "fill-in",
+    "question": "题目内容",
+    "answer": "3",
+    "tags": ["标签11", "标签12"]
+  };
+
+  expect(md.checkFillIn(originQj, testQj1)).toBe(true);
+  expect(md.checkFillIn(originQj, testQj2)).toBe(false);
+});
+
+test('测试自动评价命令题', () => {
+  var originQj = {
+    "type": "cmd-fill-in",
+    "question": "请用一行命令杀死所有包含进程中包含字符串node的命令",
+    "answer": "kill -9 `ps -ef|grep node|awk '{print $2}'`",
+    "tags": ["标签11", "标签12"],
+    "checker": [{
+      "answer-regex": "/grep/"
+    }, {
+      "output-regex": "/abc/g"
+    }]
+  };
+
+  var testQj1 = {
+    "type": "cmd-fill-in",
+    "question": "请用一行命令杀死所有包含进程中包含字符串node的命令",
+    "answer": "kill -9 `ps -ef|grep node|awk '{print $2}'`",
+    "tags": ["标签11", "标签12"]
+  };
+
+  var testQj2 = {
+    "type": "cmd-fill-in",
+    "question": "请用一行命令杀死所有包含进程中包含字符串node的命令",
+    "answer": "kill -9 `ps -ef|awk '{print $2}'`",
+    "tags": ["标签11", "标签12"]
+  };
+
+  var testQj3 = {
+    "type": "cmd-fill-in",
+    "question": "请用一行命令杀死所有包含进程中包含字符串node的命令",
+    "answer": "我不知道",
+    "tags": ["标签11", "标签12"]
+  };
+
+  expect(md.checkCmdFillIn(originQj, testQj1)).toBe(true);
+  expect(md.checkCmdFillIn(originQj, testQj2)).toBe(false);
+  expect(md.checkCmdFillIn(originQj, testQj3)).toBe(false);
+});
+
+test('测试试卷', () => {
+  expect(md.jsonCheck(originPaper, testPaper)).toBe(true);
 });
 
 //# sourceMappingURL=mdexam.test-compiled.js.map
