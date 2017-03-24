@@ -6,6 +6,12 @@ const fs = require('fs');
 const path = require('path');
 const mdexam = require('../lib/mdexam');
 
+//获取测试试卷
+const originPaper = require('./originPaper.json');
+// require(./testPaper.json);
+const testPaper = require('./testPaper.json');
+
+
 let md = mdexam();
 
 test('测试将选择题转换成JSON', () => {
@@ -119,7 +125,7 @@ test('测试自动评价选择题', () => {
       "B",
       "C"
     ],
-    "answers": [
+    "answer": [
       "A",
       "B"
     ]
@@ -137,7 +143,7 @@ test('测试自动评价选择题', () => {
       "B",
       "C"
     ],
-    "answers": [
+    "answer": [
       "A",
       "B"
     ]
@@ -155,7 +161,7 @@ test('测试自动评价选择题', () => {
       "B",
       "C"
     ],
-    "answers": [
+    "answer": [
       "A"
     ]
   };
@@ -172,7 +178,7 @@ test('测试自动评价选择题', () => {
       "B",
       "C"
     ],
-    "answers": [
+    "answer": [
       "A",
       "C"
     ]
@@ -275,4 +281,8 @@ test('测试自动评价命令题', () => {
   expect(md.checkCmdFillIn(originQj, testQj1)).toBe(true);
   expect(md.checkCmdFillIn(originQj, testQj2)).toBe(false);
   expect(md.checkCmdFillIn(originQj, testQj3)).toBe(false);
+});
+
+test('测试试卷', () => {
+  expect(md.jsonCheck(testPaper,originPaper)).toBe(5);
 });

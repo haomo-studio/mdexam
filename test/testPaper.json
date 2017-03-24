@@ -1,0 +1,79 @@
+{
+  "questions": [
+    {
+      "type": "multiple-choice",
+      "question": "下列不属于Linux常用的shell",
+      "tags": [
+        "标签11",
+        "标签12"
+      ],
+      "options": [
+        "A、bash",
+        "B、sh",
+        "C、ash",
+        "D、bach"
+      ],
+      "answer": [
+        "D、bach"
+      ],
+      "score": 5
+    },
+    {
+      "type": "multiple-choice",
+      "question": "以下不属于Linux文件系统的是",
+      "tags": [
+        "标签11",
+        "标签12"
+      ],
+      "options": [
+        "A、ext2",
+        "B、halt c",
+        "C、reboot d",
+        "D、shutdown –r now"
+      ],
+      "answer": [
+        "D、shutdown –r now"
+      ],
+      "score": 5
+    },
+    {
+      "type": "fill-in",
+      "question": "在添加用户的时候可以使用___参数来指定用户的默认shell",
+      "answer": "-d",
+      "tags": [
+        "标签11",
+        "标签12"
+      ],
+      "checker": [
+        {
+          "answer-regex": "/-d/g"
+        }
+      ],
+      "score": 5
+    },
+    {
+      "type": "fill-in",
+      "question": "更改用户密码使用____命令",
+      "answer": "passwd",
+      "tags": [
+        "标签11",
+        "标签12"
+      ],
+      "checker": [
+        {
+          "answer-regex": "/passwd/g"
+        }
+      ],
+      "score": 5
+    }
+  ],
+  "title": "linux",
+  "author": "李静",
+  "email": "lijing@haomo-studio.com",
+  "version": "v1.0.0",
+  "tags": [
+    "标签1",
+    "标签2",
+    "标签3"
+  ]
+}
