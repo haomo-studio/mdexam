@@ -7,9 +7,9 @@ const path = require('path');
 const mdexam = require('../lib/mdexam');
 
 //获取测试试卷
-const originPaper = require('./originPaper.json');
+const testPaper= require('./oPaper.json');
 // require(./testPaper.json);
-const testPaper = require('./testPaper.json');
+const originPaper= require('./tPaper.json');
 
 
 let md = mdexam();
@@ -284,5 +284,5 @@ test('测试自动评价命令题', () => {
 });
 
 test('测试试卷', () => {
-  expect(md.jsonCheck(testPaper,originPaper)).toBe(true);
+  expect(md.jsonCheck(originPaper,testPaper)).toBe(true);
 });
