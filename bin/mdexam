@@ -47,7 +47,7 @@ if(program.json) {
     var qj = md.j2m(json);
     console.log(qj);
 
-    fs.writeFile(program.output, JSON.stringify(qj, null, 4), {flag: 'w+', encoding: 'utf8'}, function(err){
+    fs.writeFile(program.output, qj, {flag: 'w+', encoding: 'utf8'}, function(err){
       if(err) {
         console.error(err);
       }
