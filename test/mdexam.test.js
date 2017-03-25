@@ -286,3 +286,8 @@ test('测试自动评价命令题', () => {
 test('测试试卷', () => {
   expect(md.jsonCheck(originPaper,testPaper)).toBe(true);
 });
+
+var answermd = require('./answer.md');
+test('测试试卷', () => {
+  expect(md.prototype.m2j(answermd)).toBe(true);
+});
