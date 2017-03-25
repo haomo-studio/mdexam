@@ -7,6 +7,7 @@ const fs = require('fs');
 const path = require('path');
 const mdexam = require('../lib/mdexam');
 const program = require('commander');
+const markDownTpl = require('../lib/markDownTpl');
 
 program
   .version('0.0.1')
@@ -39,18 +40,20 @@ if(program.markdown) {
 
 if(program.json) {
   fs.readFile(program.json, {flag: 'r+', encoding: 'utf8'}, function (err, json) {
+    console.log(markDownTpl)
     if(err) {
       console.error(err);
       return;
     }
+    fs.readFile('lib/tpl', {flag: 'r+', encoding: 'utf8'}, function (err, markDownTpl) {
+      var qj = md.j2m(json,markDownTpl);
+      console.log(qj);
 
-    var qj = md.j2m(json);
-    console.log(qj);
-
-    fs.writeFile(program.output, qj, {flag: 'w+', encoding: 'utf8'}, function(err){
-      if(err) {
-        console.error(err);
-      }
-    });
+      fs.writeFile(program.output, qj, {flag: 'w+', encoding: 'utf8'}, function(err){
+        if(err) {
+          console.error(err);
+        }
+      });
+    })
   });
 }

@@ -1,0 +1,41 @@
+# 试题名称
+#### [作者] <%- paper.author%>
+#### [邮箱] <%- paper.email%>
+#### [版本] <%- paper.version%>
+#### [标签]<% _.forEach(paper.tags, function(tag) { %>
+* <%- tag %><% }); %><% _.forEach(paper.questions, function(question) { %>
+<% if(question.type=='multiple-choice') { %>
+## [选择题] <%- question.question %>
+#### [标签]<% _.forEach(question.tags, function(tag) { %>
+* <%- tag %><% }); %>
+
+#### [选项]<% _.forEach(question.options, function(option) { %>
+* <%- option %><% }); %>
+
+#### [答案]<% _.forEach(question.answers, function(answer) { %>
+* <%- answer %><% }); %><% } %><% if(question.type=='fill-in') { %>
+## [填空题] <%- question.question %>
+#### [标签]<% _.forEach(question.tags, function(tag) { %>
+* <%- tag %><% }); %>
+
+#### [答案]
+* <%- question.answer %>
+
+#### [验证]<% _.forEach(question.checker, function(checker) { %>
+* [answer-regex] <%- checker['answer-regex'] %><% }); %><% } %>
+<% if(question.type=='cmd-fill-in') { %>
+## [命令题] <%- question.question %>
+#### [标签]
+<% _.forEach(question.tags, function(tag) { %>
+* <%- tag %>
+<% }); %>
+#### [答案]
+* <%- question.answer %>
+
+#### [验证]
+<% _.forEach(question.checker, function(checker) { %>
+<% if(checker['answer-regex']){ %>* [answer-regex] <%- checker['answer-regex'] %><% } %>
+<% if(checker['output-regex']){ %>* [output-regex] <%- checker['output-regex'] %><% } %>
+<% }); %>
+<% } %>
+<% }); %>
