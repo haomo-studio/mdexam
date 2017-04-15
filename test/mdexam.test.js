@@ -282,12 +282,12 @@ test('测试自动评价命令题', () => {
   expect(md.checkCmdFillIn(originQj, testQj2)).toBe(false);
   expect(md.checkCmdFillIn(originQj, testQj3)).toBe(false);
 });
-
-test('测试试卷', () => {
-  expect(md.jsonCheck(originPaper,testPaper)).toBe(true);
-});
-
-var answermd = require('./answer.md');
-test('测试试卷', () => {
-  expect(md.prototype.m2j(answermd)).toBe(true);
-});
+//
+// test('测试试卷', () => {
+//   expect(md.jsonCheck(originPaper,testPaper)).toBe(true);
+// });
+//
+// var answermd = require('./answer.md');
+// test('测试试卷', () => {
+//   expect(md.prototype.m2j(answermd)).toBe(true);
+// });

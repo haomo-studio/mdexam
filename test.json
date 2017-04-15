@@ -1,0 +1,60 @@
+{
+    "questions": [
+        {
+            "type": "multiple-choice",
+            "question": "题目 内容题目 内容题目 内容题目 内容题目 内容题目 内容题目 内容题目内容题目 内容题目 内容题目 内容题目 内容题目 内容题目 内容题目 内容题目 内容题目 内容题目",
+            "tags": [
+                "标签11",
+                "标签12"
+            ],
+            "options": [
+                "A 选项1",
+                "B 选项2",
+                "C 选项3"
+            ],
+            "answer": [
+                "A 选项1"
+            ]
+        },
+        {
+            "type": "fill-in",
+            "question": "题 目内 容",
+            "answer": "正确答 案或者用户 的回答",
+            "tags": [
+                "标签 11",
+                "标签 12"
+            ],
+            "checker": [
+                {
+                    "answer-regex": "/\\*\\s\\[answer-regex\\]\\s{0,}(\\S+)/g"
+                }
+            ]
+        },
+        {
+            "type": "cmd-fill-in",
+            "question": "题目 3 3内容",
+            "answer": "正确答案  或者用 户的回答",
+            "tags": [
+                "标 签11",
+                "标3签 12"
+            ],
+            "checker": [
+                {
+                    "answer-regex": "/abc/g"
+                },
+                {
+                    "output-regex": "/abc/g"
+                }
+            ]
+        }
+    ],
+    "title": "试题名称",
+    "author": "胡小根",
+    "email": "hxg@haomo-studio.com",
+    "version": "v1.0.0",
+    "tags": [
+        "标签1",
+        "标签2",
+        "标签3"
+    ]
+}
