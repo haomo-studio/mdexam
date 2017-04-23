@@ -1,0 +1,39 @@
+{
+    "questions": [
+        {
+            "type": "multiple-choice",
+            "question": "在Java EE中，Servlet是在服务器端运行，以处理客户端请求而做出的响应的程序，下列选项中属于Servlet生命周期阶段的是",
+            "tags": [],
+            "options": [
+                "A、加载和实例化",
+                "B、初始化",
+                "C、服务",
+                "D、以上全是"
+            ],
+            "answer": [
+                "D、以上全是"
+            ]
+        },
+        {
+            "type": "multiple-choice",
+            "question": "在Java EE中的MVC设计模式中，（ ）负责接受客户端的请求数据",
+            "tags": [],
+            "options": [
+                "A.JavaBean",
+                "B.JSP",
+                "C.Servlet",
+                "D.HTML"
+            ],
+            "answer": [
+                "C.Servle"
+            ]
+        }
+    ],
+    "title": "測試4",
+    "author": "管鹏波",
+    "email": "guanpengbo@haomo-studio.com",
+    "version": "v1.0.0",
+    "tags": [
+        "java"
+    ]
+}
