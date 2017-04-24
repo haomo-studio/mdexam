@@ -2,56 +2,494 @@
     "questions": [
         {
             "type": "multiple-choice",
-            "question": "题目内容",
-            "tags": [
-                "标签11",
-                "标签12"
-            ],
+            "question": "JAVA所定义的版本中不包括",
+            "tags": [],
             "options": [
-                "A.选项1",
-                "B.选项2",
-                "C.选项3"
+                "A.JAVA2EE",
+                "B.JAVA2Card",
+                "C.JAVA2ME",
+                "D.JAVA2HE"
             ],
             "answer": [
-                "A"
+                "D.JAVA2HE"
             ]
         },
         {
-            "type": "fill-in",
-            "question": "题目内容",
-            "answer": "blablabla",
-            "tags": [
-                "标签11",
-                "标签12"
+            "type": "multiple-choice",
+            "question": "下列说法正确的是",
+            "tags": [],
+            "options": [
+                "A.JAVA程序的main方法必须写在类里面",
+                "B.JAVA程序中可以有多个main方法",
+                "C.JAVA程序中类名必须与文件名一样",
+                "D.JAVA程序的main方法中如果只有一条语句，可以不用{}(大括号)括起来"
             ],
-            "checker": [
-                {
-                    "answer-regex": "/\\*\\s\\[answer-regex\\]\\s{0,}(\\S+)/g"
-                }
+            "answer": [
+                "A.JAVA程序的main方法必须写在类里面"
             ]
         },
         {
-            "type": "cmd-fill-in",
-            "question": "题目内容",
-            "answer": "blablabla",
-            "tags": [
-                "标签11",
-                "标签12"
+            "type": "multiple-choice",
+            "question": "变量命名规范说法正确的是",
+            "tags": [],
+            "options": [
+                "A.变量由字母、下划线、数字、$符号随意组成",
+                "B.变量不能以数字作为开头",
+                "C.A和a在java中是同一个变量",
+                "D.不同类型的变量，可以起相同的名字"
             ],
-            "checker": [
-                {
-                    "answer-regex": "*"
-                }
+            "answer": [
+                "B.变量不能以数字作为开头"
+            ]
+        },
+        {
+            "type": "multiple-choice",
+            "question": "为一个boolean类型变量赋值时，可以使用()方式\n",
+            "tags": [],
+            "options": [
+                "A.boolean=1;",
+                "B.boolean a=(9>=10);",
+                "C. boolean a=\"真\";",
+                "D.boolean a = = false;"
+            ],
+            "answer": [
+                "B.boolean a=(9>=10);"
+            ]
+        },
+        {
+            "type": "multiple-choice",
+            "question": "以下(  )不是合法的标识符",
+            "tags": [],
+            "options": [
+                "A.STRING",
+                "B.x3x;",
+                "C.void",
+                "D.de$f"
+            ],
+            "answer": [
+                "C.void"
+            ]
+        },
+        {
+            "type": "multiple-choice",
+            "question": "表达式(11+3*8)/4%3的值是(   )",
+            "tags": [
+                "Java"
+            ],
+            "options": [
+                "A、31",
+                "B、0",
+                "C、1",
+                "D、2"
+            ],
+            "answer": [
+                "D、2"
+            ]
+        },
+        {
+            "type": "multiple-choice",
+            "question": "（  ）表达式不可以作为循环条件",
+            "tags": [],
+            "options": [
+                "A.i++;",
+                "B.i>5;",
+                "C. bEqual = str.equals(\"q\");",
+                "D.count = = i;"
+            ],
+            "answer": [
+                "A.i++;"
+            ]
+        },
+        {
+            "type": "multiple-choice",
+            "question": "运算符优先级别排序正确的是（ ）",
+            "tags": [],
+            "options": [
+                "A.由高向低分别是：()、!、算术运算符、关系运算符、逻辑运算符、赋值运算符",
+                "B.由高向低分别是：()、关系运算符、算术运算符、赋值运算符、!、逻辑运算符",
+                "C.由高向低分别是：()、算术运算符、逻辑运算符、关系运算符、!、赋值运算符",
+                "D.由高向低分别是：()、!、关系运算符、赋值运算符、算术运算符、逻辑运算符"
+            ],
+            "answer": [
+                "A.由高向低分别是：()、!、算术运算符、关系运算符、逻辑运算符、赋值运算符"
+            ]
+        },
+        {
+            "type": "multiple-choice",
+            "question": "下列值不为true的表达式有（  ）",
+            "tags": [],
+            "options": [
+                "A.\"john\" == \"john\"",
+                "B.\"john\".equals(\"john\")",
+                "C.\"john\" = \"john\"",
+                "D.\"john\".equals(new String(\"john\"))"
+            ],
+            "answer": [
+                "C.\"john\" = \"john\""
+            ]
+        },
+        {
+            "type": "multiple-choice",
+            "question": "下面有关for循环的描述正确的是（  ）",
+            "tags": [
+                "Java"
+            ],
+            "options": [
+                "A、for循环体语句中，可以包含多条语句，但要用大括号括起来",
+                "B、for循环只能用于循环次数已经确定的情况",
+                "C、在for循环中，不能使用break语句跳出循环",
+                "D、for循环是先执行循环体语句，后进行条件判断"
+            ],
+            "answer": [
+                "A、for循环体语句中，可以包含多条语句，但要用大括号括起来"
+            ]
+        },
+        {
+            "type": "multiple-choice",
+            "question": "下列（  ）属于引用数据类型（选择两项）",
+            "tags": [],
+            "options": [
+                "A. String",
+                "B. char",
+                "C. 用户自定义的Student类类型",
+                "D. int"
+            ],
+            "answer": [
+                "C. 用户自定义的Student类类型"
+            ]
+        },
+        {
+            "type": "multiple-choice",
+            "question": "对象的特征在类中表示为变量，称为类的（  ）。",
+            "tags": [],
+            "options": [
+                "A.对象",
+                "B.属性",
+                "C.方法",
+                "D.数据类型"
+            ],
+            "answer": [
+                "B.属性"
+            ]
+        },
+        {
+            "type": "multiple-choice",
+            "question": "在java中下列关于自动类型转换说法正确的是（  ）",
+            "tags": [],
+            "options": [
+                "A.基本数据类型和String相加结果一定是字符串型",
+                "B.char类型和int类型相加结果一定是字符",
+                "C.double类型可以自动转换为int",
+                "D.char + int + double +\"\" 结果一定是double；"
+            ],
+            "answer": [
+                "A.基本数据类型和String相加结果一定是字符串型"
+            ]
+        },
+        {
+            "type": "multiple-choice",
+            "question": "关于类的描叙正确的是（  ）（选择两项）",
+            "tags": [],
+            "options": [
+                "A.在类中定义的变量称为类的成员变量，在别的类中可以直接使用",
+                "B.局部变量的作用范围仅仅在定义它的方法内，或者是在定义它的控制流块中",
+                "C.使用别的类的方法仅仅需要引用方法的名字即可",
+                "D.一个类的方法使用该类的另一个方法时可以直接引用方法名"
+            ],
+            "answer": [
+                "B.局部变量的作用范围仅仅在定义它的方法内，或者是在定义它的控制流块中",
+                "D.一个类的方法使用该类的另一个方法时可以直接引用方法名"
+            ]
+        },
+        {
+            "type": "multiple-choice",
+            "question": "下列关于字符串的描叙中错误的是（ ）（选择两项）",
+            "tags": [],
+            "options": [
+                "A.字符串是对象",
+                "B.String对象存储字符串的效率比StringBuffer高",
+                "C.可以使用StringBuffer sb=\"这里是字符串\"声明并初始化StringBuffer对象sb",
+                "D.String类提供了许多用来操作字符串的方法：连接，提取，查询等"
+            ],
+            "answer": [
+                "B.String对象存储字符串的效率比StringBuffer高",
+                "C.可以使用StringBuffer sb=\"这里是字符串\"声明并初始化StringBuffer对象sb"
+            ]
+        },
+        {
+            "type": "multiple-choice",
+            "question": "以下（  ）代码，能够对数组正确初始化（或者是默认初始化）。",
+            "tags": [],
+            "options": [
+                "A.int[] a;",
+                "B. a = {1, 2, 3, 4, 5};",
+                "C.int[] a = new int[5]{1, 2, 3, 4, 5};",
+                "D.int[] a = new int[5];"
+            ],
+            "answer": [
+                "D.int[] a = new int[5];"
+            ]
+        },
+        {
+            "type": "multiple-choice",
+            "question": "下面关于数组的说法中，错误的是（ ）（选择两项）",
+            "tags": [],
+            "options": [
+                "A.在类中声明一个整数数组作为成员变量，如果没有给它赋值，数值元素值为空",
+                "B.数组可以在内存空间连续存储任意一组数据",
+                "C.数组必须先声明，然后才能使用",
+                "D.数组本身是一个对象"
+            ],
+            "answer": [
+                "A.在类中声明一个整数数组作为成员变量，如果没有给它赋值，数值元素值为空",
+                "B.数组可以在内存空间连续存储任意一组数据"
+            ]
+        },
+        {
+            "type": "multiple-choice",
+            "question": "在Java中,关于构造方法，下列说法错误的是(    )",
+            "tags": [],
+            "options": [
+                "A.构造方法的名称必须与类名相同",
+                "B.构造方法可以带参数",
+                "C.构造方法不可以重载",
+                "D.构造方法绝对不能有返回值"
+            ],
+            "answer": [
+                "C.构造方法不可以重载"
+            ]
+        },
+        {
+            "type": "multiple-choice",
+            "question": "下面（   ）不是String类提供的合法的方法。",
+            "tags": [],
+            "options": [
+                "A.equals(String)",
+                "B.trim()",
+                "C.append()",
+                "D.indexOf()"
+            ],
+            "answer": [
+                "C.append()"
+            ]
+        },
+        {
+            "type": "multiple-choice",
+            "question": "在JAVA中，以下（  ）类的对象以键-值的方式存储对象",
+            "tags": [],
+            "options": [
+                "A.java.util.List",
+                "B.java.util.ArrayList",
+                "C.java.util.HashMap",
+                "D.java.util.LinkedList"
+            ],
+            "answer": [
+                "C.java.util.HashMap"
+            ]
+        },
+        {
+            "type": "multiple-choice",
+            "question": "在Java中，下面对于构造函数的描述错误的是（  ）（选择两项）",
+            "tags": [],
+            "options": [
+                "A.类不一定要显式定义构造函数",
+                "B.构造函数的返回类型是void",
+                "C.如果构造函数不带任何参数，那么构造函数的名称和类名可以不同",
+                "D.一个类可以定义多个构造函数"
+            ],
+            "answer": [
+                "B.构造函数的返回类型是void",
+                "C.如果构造函数不带任何参数，那么构造函数的名称和类名可以不同"
+            ]
+        },
+        {
+            "type": "multiple-choice",
+            "question": "在Java语言中，下列关于类的继承的描述，正确的是（ ）",
+            "tags": [],
+            "options": [
+                "A.一个类可以继承多个父类",
+                "B.一个类可以具有多个子类",
+                "C.子类可以使用父类的所有方法",
+                "D.子类一定比父类有更多的成员方法"
+            ],
+            "answer": [
+                "B.一个类可以具有多个子类"
+            ]
+        },
+        {
+            "type": "multiple-choice",
+            "question": "下列选项中关于Java中super关键字的说法正确的是（ ）",
+            "tags": [],
+            "options": [
+                "A.super关键字是在子类对象内部指代其父类对象的引用",
+                "B.super关键字不仅可以指代子类的直接父类，还可以指代父类的父类",
+                "C.子类通过super关键字只能调用父类的方法，而不能调用父类的属性",
+                "D.子类通过super关键字只能调用父类的属性，而不能调用父类的方法"
+            ],
+            "answer": []
+        },
+        {
+            "type": "multiple-choice",
+            "question": "在Java接口中，下列选项中有效的方法声明是（  ）。（选择二项）",
+            "tags": [],
+            "options": [
+                "A.public void aMethod();",
+                "B.void aMethod();",
+                "C.protected void aMethod();",
+                "D.private void aMethod();"
+            ],
+            "answer": [
+                "A.public void aMethod();",
+                "B.void aMethod();"
+            ]
+        },
+        {
+            "type": "multiple-choice",
+            "question": "在JAVA的异常处理模型中，能单独和finally语句一起使用的块是（ ）\n",
+            "tags": [],
+            "options": [
+                "A.try",
+                "B.catch",
+                "C.throw",
+                "D.throws"
+            ],
+            "answer": [
+                "A.try"
+            ]
+        },
+        {
+            "type": "multiple-choice",
+            "question": "在JAVA中，Object类是所有类的父亲，用户自定义类默认扩展自Object类，下列选项 中的（  ）方法不属于Object类的方法。",
+            "tags": [],
+            "options": [
+                "A.equals(Object obj)",
+                "B.getClass()",
+                "C.toString()",
+                "D.trim()"
+            ],
+            "answer": [
+                "D.trim()"
+            ]
+        },
+        {
+            "type": "multiple-choice",
+            "question": "下列选项中关于Java中封装的说法错误的是（ ）",
+            "tags": [],
+            "options": [
+                "A.封装就是将属性私有化，提供共有的方法访问私有属性",
+                "B.属性的访问方法包括setter方法和getter方法",
+                "C.setter方法用于赋值，getter方法用于取值",
+                "D.包含属性的类都必须封装属性，否则无法通过编译"
+            ],
+            "answer": [
+                "D.包含属性的类都必须封装属性，否则无法通过编译"
+            ]
+        },
+        {
+            "type": "multiple-choice",
+            "question": "Java中，如果类C是类B的子类，类B是类A的子类，那么下面描述正确的是（ ）",
+            "tags": [],
+            "options": [
+                "A.C不仅继承了B中的成员，同样也继承了A中的成员",
+                "B.C只继承了B中的成员",
+                "C.C只继承了A中的成员",
+                "D.C不能继承A或B中的成员"
+            ],
+            "answer": [
+                "A.C不仅继承了B中的成员，同样也继承了A中的成员"
+            ]
+        },
+        {
+            "type": "multiple-choice",
+            "question": "分析选项中关于Java中this关键字的说法正确的是（  ）",
+            "tags": [],
+            "options": [
+                "A. this关键字是在对象内部指代自身的引用",
+                "B. this关键字可以在类中的任何位置使用",
+                "C. this关键字和类关联，而不是和特定的对象关联",
+                "D. 同一个类的不同对象共用一个this"
+            ],
+            "answer": [
+                "A. this关键字是在对象内部指代自身的引用"
+            ]
+        },
+        {
+            "type": "multiple-choice",
+            "question": "在JAVA中，LinkedList类和ArrayList类同属于集合框架类，下列（  ）选项中的方 法是LinkedList类有而ArrayList类没有的。",
+            "tags": [],
+            "options": [
+                "A.add(Object o)",
+                "B.add(int index，Object o)",
+                "C.remove(Object o)",
+                "D.removeLast()"
+            ],
+            "answer": [
+                "D.removeLast()"
+            ]
+        },
+        {
+            "type": "multiple-choice",
+            "question": "在JAVA中ArrayList类实现了可变大小的数组，便于遍历元素和随机访问元素，已知 获得了ArrayList类的对象bookTypeList，则下列语句中能够实现判断列表中是否存在字符串“小说”的是（  ）。",
+            "tags": [],
+            "options": [
+                "A.bookTypeList.add(\"小说\");",
+                "B.bookTypeList.get(\"小说\");",
+                "C.bookTypeList.contains(\"小说\");",
+                "D.bookTypeList.remove(\"小说\");"
+            ],
+            "answer": [
+                "C.bookTypeList.contains(\"小说\");"
+            ]
+        },
+        {
+            "type": "multiple-choice",
+            "question": "以下用于创建容器对象的类是（  ）（选择两项）",
+            "tags": [],
+            "options": [
+                "A.Frame",
+                "B.Checkbox",
+                "C.Panel",
+                "D.TextField"
+            ],
+            "answer": [
+                "A.Frame",
+                "C.Panel"
+            ]
+        },
+        {
+            "type": "multiple-choice",
+            "question": "以下关于抽象类和接口的说法错误的是（  ）",
+            "tags": [],
+            "options": [
+                "A.抽象类在Java语言中表示的是一种继承关系，一个类只能使用一次继承。但是一 个类却可以实现多个接口。",
+                "B.在抽象类中可以没有抽象方法",
+                "C.实现抽象类和接口的类必须实现其中的所有方法，除非它也是抽象类。接口中的方 法都不能被实现",
+                "D.接口中的方法都必须加上public关键字。"
+            ],
+            "answer": [
+                "D.接口中的方法都必须加上public关键字。"
+            ]
+        },
+        {
+            "type": "multiple-choice",
+            "question": "关于面向对象的说法正确的是（  ）",
+            "tags": [],
+            "options": [
+                "A.类可以让我们用程序模拟现实世界中的实体",
+                "B.有多少个实体就要创建多少个类",
+                "C.对象的行为和属性被封装在类中，外界通过调用类的方法来获得，但是要知道类的 内部是如何实现",
+                "D.现实世界中的某些实体不能用类来描述"
+            ],
+            "answer": [
+                "A.类可以让我们用程序模拟现实世界中的实体"
             ]
         }
     ],
     "title": "试题名称",
-    "author": "胡小根",
-    "email": "hxg@haomo-studio.com",
+    "author": "管鹏波",
+    "email": "guanpengbo@haomo-studio.com",
     "version": "v1.0.0",
     "tags": [
-        "标签1",
-        "标签2",
-        "标签3"
+        "java"
     ]
 }
