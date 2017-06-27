@@ -1,0 +1,514 @@
+{
+    "questions": [
+        {
+            "type": "multiple-choice",
+            "question": " 如果提示提交内容为空、不能提交，则最为合适的处理方式是",
+            "tags": [],
+            "options": [
+                "A.执行 git status 查看状态，再执行 git add 命令选择要提交的文件，然后提交",
+                "B.执行 git commit --allow-empty ，允许空提交",
+                "C.执行 git commit -a ，提交所有改动",
+                "D.执行 git commit --amend 进行修补提交"
+            ],
+            "answer": [
+                "A.执行 git status 查看状态，再执行 git add 命令选择要提交的"
+            ]
+        },
+        {
+            "type": "multiple-choice",
+            "question": " 拷贝一个 Git 仓库到本地，让自己能够查看该项目，或者进行修改的命令是",
+            "tags": [],
+            "options": [
+                "A.执行git copy 仓库地址",
+                "B.执行git clone 仓库地址",
+                "C.执行git commit -a",
+                "D.执行git commit --amend"
+            ],
+            "answer": [
+                "B.执行git clone 仓库地址"
+            ]
+        },
+        {
+            "type": "multiple-choice",
+            "question": "如果刚刚完成的提交说明写错了，应该如何操作",
+            "tags": [],
+            "options": [
+                "A.执行 git commit -m \"message...\" 重写提交说明。",
+                "B.执行 git reset --hard HEAD^ ，丢弃最新提交。",
+                "C.执行 git revert HEAD 反转最新提交。",
+                "D.执行 git commit --amend 进行修补提交。"
+            ],
+            "answer": [
+                "B.执行 git reset --hard HEAD^ ，丢弃最新提交。"
+            ]
+        },
+        {
+            "type": "multiple-choice",
+            "question": "如果项目中文件 Hello.java 被不小心从工作区删除了，下面哪个命令可以找回该文件",
+            "tags": [],
+            "options": [
+                "A.执行 git clean -f 删除临时性文件",
+                "B.向版本库中添加一个 .gitignore 文件，其中包含一条内容为 *.xx 的记录",
+                "C.在文件 .git/info/exclude 中添加一条内容为 *.xx 的记录",
+                "D.更换另外一款IDE软件"
+            ],
+            "answer": [
+                "B.向版本库中添加一个 .gitignore 文件，其中包含一条内容为 *.xx 的记录"
+            ]
+        },
+        {
+            "type": "multiple-choice",
+            "question": " 所有改动的文件都已加入暂存区，若希望将其中的 other.py 文件下次再提交，如何操作？",
+            "tags": [],
+            "options": [
+                "A.git reset -- other.py",
+                "B.git checkout -- other.py",
+                "C.git checkout HEAD other.py",
+                "D.git reset --hard -- other.py"
+            ],
+            "answer": [
+                "B.git checkout -- other.py"
+            ]
+        },
+        {
+            "type": "multiple-choice",
+            "question": " 关于删除分支XX，下列说法正确的是",
+            "tags": [],
+            "options": [
+                "A.执行 git push origin :XX 来删除远程版本库的 XX 分支",
+                "B.执行 git branch -D XX 删除分支，总是能成功",
+                "C.远程版本库删除的分支，在执行 git fetch 时本地分支自动删除",
+                "D.本地删除的分支，执行 git push 时，远程分支亦自动删除"
+            ],
+            "answer": [
+                "B.执行 git branch -D XX 删除分支，总是能成功"
+            ]
+        },
+        {
+            "type": "multiple-choice",
+            "question": " 如果把项目中文件 hello.c 的内容破坏了，如何使其还原至原始版本",
+            "tags": [],
+            "options": [
+                "A.git reset -- hello.c",
+                "B.git checkout HEAD -- hello.c",
+                "C.git revert hello.c",
+                "D.git update hello.c"
+            ],
+            "answer": [
+                "B.git checkout HEAD -- hello.c"
+            ]
+        },
+        {
+            "type": "multiple-choice",
+            "question": " 修改的文档 meeting.doc 尚未提交，因为错误地执行了 git reset --hard 导致数据丢失。丢失的数据能找回么",
+            "tags": [],
+            "options": [
+                "A.不能。执行硬重置使工作区文件被覆盖，导致数据丢失无法找回",
+                "B.能。可以通过 git checkout HEAD@{1} -- meeting.doc 找回",
+                "C.不确定。如果在重置前执行了 git add 命令将 meeting.doc 加入了暂存区，则可以在对象库中处于悬空状态的文件中找到",
+                "D.不能。因为未提交所以无法找回"
+            ],
+            "answer": [
+                "C.不确定。如果在重置前执行了 git add 命令将 meeting.doc 加入了暂存区，则可以在对象库中处于悬空状态的文件中找到"
+            ]
+        },
+        {
+            "type": "multiple-choice",
+            "question": "仅将工作区中修改的文件添加到暂存区（新增文件不添加），以备提交，用什么命令标记最快",
+            "tags": [],
+            "options": [
+                "A.git add -A",
+                "B.git add -p",
+                "C.git add -i",
+                "D.git add -u"
+            ],
+            "answer": [
+                "D.git add -u"
+            ]
+        },
+        {
+            "type": "multiple-choice",
+            "question": "下面哪一个命令,不会改变提交历史",
+            "tags": [],
+            "options": [
+                "A.git reset --hard HEAD~1",
+                "B.git checkout HEAD^^ .",
+                "C.git rebase -i HEAD^^",
+                "D.git commit --amend"
+            ],
+            "answer": [
+                "C.git rebase -i HEAD^^"
+            ]
+        },
+        {
+            "type": "multiple-choice",
+            "question": "我使用和其他人不一样的IDE软件，总是在目录下生成以 .xx 为后缀的临时文件。如何避免由于自己的误操作导致此类文件被添加到版本库中呢",
+            "tags": [],
+            "options": [
+                "A.执行 git clean -f 删除临时性文件",
+                "B.向版本库中添加一个 .gitignore 文件，其中包含一条内容为 *.xx 的记录",
+                "C.在文件 .git/info/exclude 中添加一条内容为 *.xx 的记录",
+                "D.更换另外一款IDE软件。"
+            ],
+            "answer": [
+                "D.更换另外一款IDE软件"
+            ]
+        },
+        {
+            "type": "multiple-choice",
+            "question": "项目跨平台导致文件中的换行符不一致。其中有 Linux 格式换行符（0A），也有DOS格式换行符（0D 0A）。要如何避免此类情况呢",
+            "tags": [],
+            "options": [
+                "A.修改 /etc/gitattributes 文件，在其中包含一条内容为 * text=auto 的设置",
+                "B.执行命令 git config --global core.autocrlf true",
+                "C.执行命令 git config --global core.autocrlf input",
+                "D.向版本库中添加一个 .gitattributes 文件，在其中包含一条内容为 * text=auto 的设置"
+            ],
+            "answer": [
+                "B.执行命令 git config --global core.autocrlf true"
+            ]
+        },
+        {
+            "type": "multiple-choice",
+            "question": "下列对于版本库授权说法正确的是",
+            "tags": [],
+            "options": [
+                "A.可以为分支或路径设置不同的写入权限，但不能设置不同的读取权限。",
+                "B.除管理员外，版本库的创建者都可以为自己创建的版本库授权。",
+                "C.只要通过授权后，便不能限制所推送的提交的署名作者，可以是任何人。",
+                "D.如果没有向版本库的写入权限，就一定没有读取权限。"
+            ],
+            "answer": [
+                "C.只要通过授权后，便不能限制所推送的提交的署名作者，可以是任何人"
+            ]
+        },
+        {
+            "type": "multiple-choice",
+            "question": "取消服务器版本库中ID为 a2387 的提交，而且不能引起历史提交的变更，用什么操作",
+            "tags": [],
+            "options": [
+                "A.git rebase -i a2387^",
+                "B.git checkout a2387^ -- .",
+                "C.git revert a2387",
+                "D.git reset --hard a2387^"
+            ],
+            "answer": [
+                "C.git revert a2387"
+            ]
+        },
+        {
+            "type": "multiple-choice",
+            "question": "从版本库中的历史提交中彻底移除ID为 a2387 的提交，用什么操作？ _____",
+            "tags": [],
+            "options": [
+                "A.git reset --hard a2387^",
+                "B.git checkout a2387^ -- .",
+                "C.git revert a2387",
+                "D.git rebase --onto a2387^ a2387 HEAD"
+            ],
+            "answer": [
+                "A.git reset --hard a2387^"
+            ]
+        },
+        {
+            "type": "multiple-choice",
+            "question": "若产品的版本号显示为 1.7.10.rc0-33-g9678d-dirty ，可以判断出此版本号是如何生成的么",
+            "tags": [],
+            "options": [
+                "A.git tag",
+                "B.git describe --tags --always --dirty",
+                "C.git name-rev HEAD",
+                "D.git --version"
+            ],
+            "answer": [
+                "B.git describe --tags --always --dirty"
+            ]
+        },
+        {
+            "type": "multiple-choice",
+            "question": "关于 git clone 下面说法错误的是",
+            "tags": [],
+            "options": [
+                "A.克隆时所有分支均被克隆，但只有HEAD指向的分支被检出",
+                "B.可以通过 git clone --single-branch 命令实现只克隆一个分支",
+                "C.克隆出的工作区中执行 git log 、 git status 、 git checkout 、 git commit 等操作不会去访问远程版本库",
+                "D.克隆时只有远程版本库HEAD指向的分支被克隆"
+            ],
+            "answer": [
+                "D.克隆时只有远程版本库HEAD指向的分支被克隆"
+            ]
+        },
+        {
+            "type": "multiple-choice",
+            "question": "关于删除分支 XX ，下列说法正确的是",
+            "tags": [],
+            "options": [
+                "A.执行 git push origin :XX 来删除远程版本库的 XX 分支",
+                "B.执行 git branch -D XX 删除分支，总是能成功",
+                "C.远程版本库删除的分支，在执行 git fetch 时本地分支自动删除",
+                "D.本地删除的分支，执行 git push 时，远程分支亦自动删除"
+            ],
+            "answer": [
+                "A.执行 git push origin :XX 来删除远程版本库的 XX 分支"
+            ]
+        },
+        {
+            "type": "multiple-choice",
+            "question": "一个图片文件 logo.png 冲突了，如何取出他人的版本",
+            "tags": [],
+            "options": [
+                "A.git show :1:./logo.png > logo.png-theirs",
+                "B.git show :2:./logo.png > logo.png-theirs",
+                "C.git show :3:./logo.png > logo.png-theirs",
+                "D.git show :0:./logo.png > logo.png-theirs"
+            ],
+            "answer": [
+                "D.git show :0:./logo.png > logo.png-theirs"
+            ]
+        },
+        {
+            "type": "multiple-choice",
+            "question": "工作在特性分支，常常因为执行 git push 默认推送所有本地和远程共有分支，导致非当前分支报告 non-fast-forward 错误。如果设置只推送当前分支可避免此类问题。下面操作正确的是",
+            "tags": [],
+            "options": [
+                "A.git config --global push.default upstream",
+                "B.git config --global pull.rebase true",
+                "C.git config --global receive.denyDeletes true",
+                "D.git config --global pager.status true"
+            ],
+            "answer": [
+                "A.git config --global push.default upstream"
+            ]
+        },
+        {
+            "type": "multiple-choice",
+            "question": "关于对象库（.git/objects）说法错误的是",
+            "tags": [],
+            "options": [
+                "A.两个内容相同文件名不同的文件，在对象库中仅有一个拷贝",
+                "B.对象库执行 git gc 操作后，reflog 会被清空导致其中记录的未跟踪提交及指向的文件被丢弃",
+                "C.删除文件后，再通过添加相同文件找回，不会造成版本库的冗余",
+                "D.对象库并非一直保持最优存储，而是通过周期性地执行 git gc 优化版本库"
+            ],
+            "answer": [
+                "B.对象库执行 git gc 操作后，reflog 会被清空导致其中记录的未跟踪提交及指向的文件被丢弃"
+            ]
+        },
+        {
+            "type": "multiple-choice",
+            "question": "git从本地分支切换到远程分支的指令是",
+            "tags": [],
+            "options": [
+                "A.git checkout -b dev origin/dev",
+                "B. git remote add dev",
+                "C.git checkout dev",
+                "D.git reset --hard dev"
+            ],
+            "answer": [
+                "A.git checkout -b dev origin/dev"
+            ]
+        },
+        {
+            "type": "multiple-choice",
+            "question": " git添加项目到远程仓库",
+            "tags": [],
+            "options": [
+                "A.git remote add shortname url",
+                "B.git add remote shortname url",
+                "C.git remote add url shortname",
+                "D.git add remote url shortname"
+            ],
+            "answer": [
+                "A.git remote add shortname url"
+            ]
+        },
+        {
+            "type": "multiple-choice",
+            "question": " git查看远程分支",
+            "tags": [],
+            "options": [
+                "A.git branch -r",
+                "B.git branch",
+                "C.git branch [name]",
+                "D.git checkout [name]"
+            ],
+            "answer": [
+                "A.git branch -r"
+            ]
+        },
+        {
+            "type": "multiple-choice",
+            "question": " git查看本地分支",
+            "tags": [],
+            "options": [
+                "A.git branch -r",
+                "B.git branch",
+                "C.git branch [name]",
+                "D.git checkout [name]"
+            ],
+            "answer": [
+                "B.git branch"
+            ]
+        },
+        {
+            "type": "multiple-choice",
+            "question": " git强制删除一个分支",
+            "tags": [],
+            "options": [
+                "A.git branch -r",
+                "B.git branch -r [name]",
+                "C.git branch -D [name]",
+                "D.git branch -d [name]"
+            ],
+            "answer": [
+                "C.git branch -D [name]"
+            ]
+        },
+        {
+            "type": "multiple-choice",
+            "question": " git创建新分支并立即切换到新分支",
+            "tags": [],
+            "options": [
+                "A.git checkout -b [name]",
+                "B.git checkout [name]",
+                "C.git branch [name]",
+                "D.git branch -b [name]"
+            ],
+            "answer": [
+                "A.git checkout -b [name]"
+            ]
+        },
+        {
+            "type": "multiple-choice",
+            "question": " git查看远程仓库",
+            "tags": [],
+            "options": [
+                "A.git remote -l",
+                "B.git remote -s",
+                "C.git remote -ls",
+                "D.git remote -v"
+            ],
+            "answer": []
+        },
+        {
+            "type": "multiple-choice",
+            "question": " git拉取远程仓库",
+            "tags": [],
+            "options": [
+                "A.git pull [remoteName][localBranchName]",
+                "B.git pull [localBranchName][remoteName]",
+                "C.git push [remoteName][localBranchName]",
+                "D.git push [localBranchName][remoteName]"
+            ],
+            "answer": [
+                "A.git pull [remoteName][localBranchName]"
+            ]
+        },
+        {
+            "type": "multiple-choice",
+            "question": " git推送远程仓库",
+            "tags": [],
+            "options": [
+                "A.git pull [remoteName][localBranchName]",
+                "B.git pull [localBranchName][remoteName]",
+                "C.git push [remoteName][localBranchName]",
+                "D.git push [localBranchName][remoteName]"
+            ],
+            "answer": [
+                "C.git push [remoteName][localBranchName]"
+            ]
+        },
+        {
+            "type": "multiple-choice",
+            "question": " git查看本地所有分支",
+            "tags": [],
+            "options": [
+                "A.git branch -l",
+                "B.git branch -r",
+                "C.git branch -a",
+                "D.git branch"
+            ],
+            "answer": [
+                "B.git branch -r"
+            ]
+        },
+        {
+            "type": "multiple-choice",
+            "question": " git提交并添加commit信息",
+            "tags": [],
+            "options": [
+                "A.git commit \"注释\"",
+                "B.git commit -am",
+                "C.git commit -am \"注释\"",
+                "D.git commit"
+            ],
+            "answer": [
+                "C.git commit -am \"注释\""
+            ]
+        },
+        {
+            "type": "multiple-choice",
+            "question": " git查看当前状态",
+            "tags": [],
+            "options": [
+                "A.git log",
+                "B.git status",
+                "C.git info",
+                "D.git detail"
+            ],
+            "answer": [
+                "B.git status"
+            ]
+        },
+        {
+            "type": "multiple-choice",
+            "question": " git本地与服务器端同步",
+            "tags": [],
+            "options": [
+                "A.git log",
+                "B.git pull",
+                "C.git info",
+                "D.git detail"
+            ],
+            "answer": [
+                "B.git pull"
+            ]
+        },
+        {
+            "type": "multiple-choice",
+            "question": " git切换到远程dev分支",
+            "tags": [],
+            "options": [
+                "A.git checkout --track origin/dev",
+                "B.git checkout origin/dev",
+                "C.git checkout origin/dev --track",
+                "D.git checkout -b dev origin/dev"
+            ],
+            "answer": [
+                "A.git checkout --track origin/dev"
+            ]
+        },
+        {
+            "type": "multiple-choice",
+            "question": " git将分支dev与当前分支进行合并",
+            "tags": [],
+            "options": [
+                "A.git merge origin/dev",
+                "B.git merge dev",
+                "C.git fetch origin/dev",
+                "D.git fetch dev"
+            ],
+            "answer": [
+                "A.git merge origin/de"
+            ]
+        }
+    ],
+    "title": "git",
+    "author": "王生龙",
+    "email": "wangshenglong@haomo-studio.com",
+    "version": "v1.0.0",
+    "tags": [
+        "git",
+        "版本控制工具"
+    ]
+}
